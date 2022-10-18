@@ -1,0 +1,53 @@
+1. Desarrollo MEAN stack (Mongo, Express, Angular, Node)
+2. MongoDB - Tipos de bases de datos No SQL
+*SQL
+    Relacionales
+    Tablas
+    Esquemas
+*No SQL
+    No relacionales
+    Javascript para hacer consultas como lenguaje
+    Orientadas a colecciones de documentos (json, bson) en Mongo es binary json
+    Sencillez
+    Velocidad
+    Esquema sea libre
+3. NodeJS
+    Javascript en el servidor
+    conexion al servidor
+    crear un servidor
+    modelos
+    controladores y rutas
+    subir archivos
+    herramienta postman
+4. API RESTful
+    API Node es un servicio backend que nos permite recibir 
+    peticiones HTTP y devolver un json
+    el servicio lo puede consumir cualquier dispositivo o app 
+    que entienda el protocolo HTTP
+para ejecutar un archivo js por terminal
+node nombreArchivo.js
+Elemplo
+node holaMundo.js
+
+------Contenido holaMundo.js
+console.log("Hola mundo");
+-------
+
+----------
+Creacion de proyecto con NodeJS
+npm init //aqui llenamos los datos de nuestro proyecto y se genera
+         //el archivo package.json
+//agregamos dependencias y paquetes a nuestro proyecto
+//express que es el servidor nos permitira definir rutas,
+//recibir peticiones 
+//--save para que la dependencia se guarde en nuetro proyecto
+npm install express --save
+//otro paquete es body-parser para convertir nuestras 
+//peticiones de backend en json
+npm install body-parser --save
+//otro que agregamos es el de manejo de archivos para subir archivos, imagenes
+npm install connect-multiparty --save
+//para trabajar con mongodb instalar mongoose
+npm install mongoose --save
+//vamos a instalar una que permite refrescar el servidor
+npm install nodemon --save-dev
