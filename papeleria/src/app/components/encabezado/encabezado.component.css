@@ -1,0 +1,39 @@
+.logo{
+    width: 200px;
+    height: 100px;
+}
+#buscar{
+    width: 600px;
+    margin-top: 30px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-left: 14px;
+    box-shadow: 1px 1px 4px #ccc inset;
+    border: 1px solid #ccc;
+}
+#buscarLogo{
+    width: 30px;
+    float: right;
+    margin-top: -29px;
+    margin-right: -29px;
+    padding: 3px;
+    border-top-right-radius:15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 1px 1px 4px #ccc inset;
+    border: 1px solid #ccc;
+}
+#contactoLogo{
+    width: 30px;
+}
+#contacto{
+    border: 1px;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 140px;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+.dato{
+    margin-top: 20px;
+}

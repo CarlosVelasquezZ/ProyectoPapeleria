@@ -1,0 +1,26 @@
+<section id="enlaces">
+    <a [routerLink]="['/inicio']">INICIO</a>
+</section>
+<section id="contenedor">
+    <h3>Iniciar Sesión Con Su Cuenta</h3>
+    <div id="login" class="aside-box">
+        <form #login="ngForm" (ngSubmit)="guardar(login)">
+            <label id="user">Correo electrónico</label>
+            <input type="email" name="email" ngModel>
+            <label id="password">Contraseña</label>
+            <input type="password" name="password" ngModel>
+            <div id="clearfix"></div>
+            <a [routerLink]="['/recuperar-contraseña']">¿Olvido su contrseña?</a>
+            <input type="submit" value="INICIAR SESIÓN" >
+            <a [routerLink]="['/registrarse']">¿No esta registrado? Registrate aquí</a>
+        </form>
+    </div>
+</section>
+
+<div id="siguenos">
+    <label>SÍGUENOS</label>
+    <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+    <a href="https://twitter.com/" target="_blank"><i class="bi bi-twitter"></i></a>
+    <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
+    <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+</div>

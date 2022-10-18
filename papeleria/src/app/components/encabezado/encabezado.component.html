@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row align-items-start">
+      <div class="col">
+        <img src="../../../assets/logo.jpeg" alt="logo" class="logo">
+      </div>
+      <div class="col">
+        <form>
+          <!--<input type="text" name="marca" id="buscar" [(ngModel)]="celular.marca" required placeholder="  Buscar producto">-->
+          <input type="text" id="buscar" placeholder="Buscar producto">
+          <input type="image" value="Ver" src="../../../assets/buscar.png" id="buscarLogo">
+        </form>
+      </div>
+      <div class="col">
+        <div id="contacto">
+          <img src="../../../assets/contacto.png" alt="contacto" id="contactoLogo">
+          <p>Teléfono: *********</p>
+          <p style="margin-top: -17px;">Email: ************</p>
+        </div>
+      </div>
+      <div class="col">
+        <form #login="ngForm" (ngSubmit)="cerrar()">
+          <div class="dato">Registrarse</div>
+        </form>
+      </div>
+      <!--<div class="col">
+      </div>-->
+    </div>
+  </div>

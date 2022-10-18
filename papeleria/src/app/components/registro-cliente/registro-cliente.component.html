@@ -1,0 +1,75 @@
+<section id="enlaces">
+    <a [routerLink]="['/inicio']">INICIO</a>
+</section>
+
+<section id="contenedor">
+    <h3>Proceso de Registro</h3>
+    <form class="card shadow col-xs-12 col-sm-6 col-md-6 col-lg-4 p-4 mx-auto" [formGroup]="clienteForm" (ngSubmit)="registrarCliente()">
+        <a [routerLink]="['/login']" class="registrado" style="font-size: 15px;">¿Ya está registrado? ¡Inicie sesión!</a><br>
+        <div class="mb-3">
+            <label>Nombre</label>
+            <input type="text" class="form-control" formControlName="nombre">
+            <div class="text-danger"
+                *ngIf="clienteForm.get('nombre')?.hasError('required') && clienteForm.get('nombre')?.touched">
+                <span>El nombre <strong>es obligatorio</strong></span>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>Apellido</label>
+            <input type="text" class="form-control" formControlName="apellido">
+            <div class="text-danger"
+                *ngIf="clienteForm.get('apellido')?.hasError('required') && clienteForm.get('apellido')?.touched">
+                <span>El apellido <strong>es obligatorio</strong></span>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>Cédula o RUC</label>
+            <input type="text" class="form-control" formControlName="cedula">
+            <div class="text-danger"
+                *ngIf="clienteForm.get('cedula')?.hasError('required') && clienteForm.get('cedula')?.touched">
+                <span>La cédula o RUC <strong>es obligatorio</strong></span>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>Correo electrónico</label>
+            <input type="email" class="form-control" formControlName="correo">
+            <div class="text-danger"
+                *ngIf="clienteForm.get('correo')?.hasError('required') && clienteForm.get('correo')?.touched">
+                <span>El correo <strong>es obligatorio</strong></span>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>Dirección domiciliaria</label>
+            <input type="text" class="form-control" formControlName="direccion">
+            <div class="text-danger"
+                *ngIf="clienteForm.get('direccion')?.hasError('required') && clienteForm.get('direccion')?.touched">
+                <span>La dirección domiciliaria <strong>es obligatoria</strong></span>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>Número de teléfono</label>
+            <input type="number" class="form-control" formControlName="telefono">
+            <div class="text-danger"
+                *ngIf="clienteForm.get('telefono')?.hasError('required') && clienteForm.get('telefono')?.touched">
+                <span>El número de teléfono <strong>es obligatorio</strong></span>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>Contraseña<strong> (Debe tener al menos: un numero, una mayuscula y por lo menos 8 caracteres.)</strong></label>
+            <input type="password" class="form-control" formControlName="contrasenia">
+            <div class="text-danger"
+                *ngIf="clienteForm.get('contrasenia')?.hasError('required') && clienteForm.get('contrasenia')?.touched">
+                <span>La contraseña <strong>es obligatoria</strong></span>
+            </div>
+        </div>
+        <button type="submit" [disabled]="clienteForm.invalid" class="btn btn-primary">GUARDAR</button>
+    </form>
+</section>
+
+<div id="siguenos">
+    <label>SÍGUENOS</label>
+    <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+    <a href="https://twitter.com/" target="_blank"><i class="bi bi-twitter"></i></a>
+    <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
+    <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+</div>

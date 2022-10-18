@@ -1,0 +1,16 @@
+<section id="enlaces">
+    <i class="bi bi-arrow-left-square-fill"></i><a [routerLink]="['/admin']">REGRESAR</a>
+</section>
+<h1>Productos</h1>
+<div class="row text-center" id="tarjeta" style="margin-top: 10px; margin-left: 20px; font-family: 'BebasNeue';">
+    <div class="card" style="width: 18rem; margin-right: 10px; margin-bottom: 10px;" *ngFor="let producto of productos">
+        <img src="{{url+'get-imagen/'+producto.imagen}}" *ngIf="producto.imagen" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{producto.nombre}}</h5>
+          <p class="card-text">Stock: {{producto.stock}}</p>
+          <p class="card-text">Precio: ${{producto.precio}}</p>
+          <a [routerLink]="['/eliminar-producto',producto._id]" class="btn btn-primary">Eliminar</a>
+          <a [routerLink]="['/modificar-producto',producto._id]" class="btn btn-primary" style="margin-left: 10px;">Editar</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,180 @@
+<app-encabezado></app-encabezado>
+<!--Inicio menu-->
+<nav id="menu" class="position-relative">
+  <ul class="nav">
+    <li class="nav-item"><a class="nav-link fs-3" aria-current="page" style="margin-right: 20px;"
+        [routerLink]="['/inicio']">INICIO</a></li>
+    <li class="nav-item"><a class="nav-link fs-3" aria-current="page" style="margin-right: 20px;">NOSOTROS</a>
+      <ul style="margin-top: 0px;" id="submenu">
+        <li class="nav-item"><a class="nav-link fs-5" aria-current="page" [routerLink]="['/quienes-somos']">Quiénes
+            Somos</a>
+      </ul>
+    </li>
+    <li class="nav-item"><a class="nav-link fs-3" aria-current="page" href="#"
+        style="margin-right: 20px;" [routerLink]="['/productos']" >CATEGORIAS</a>
+      <ul style="margin-top: 0px;" id="submenu">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-auto me-auto">
+              <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                [routerLink]="['/productos/Tecnologia']">Tecnologia</a>
+                <ul>
+                  <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                      [routerLink]="['/productos/Accesorio Computador']">Accesorio Computador</a></li>
+                  <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                      [routerLink]="['/productos/almacenamiento']">Almacenamiento</a></li>
+                  <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                      [routerLink]="['/productos/audio']">Audio</a></li>
+                </ul>
+              </li>
+            </div>
+            <div class="col-auto" id="flecha">
+              <i class="bi bi-chevron-right"></i>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-auto me-auto">
+              <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                [routerLink]="['/productos/Arte']">Arte</a>
+                <ul>
+                  <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                      [routerLink]="['/productos/arquitectura']">Arquitectura</a></li>
+                </ul>
+              </li>
+            </div>
+            <div class="col-auto" id="flecha">
+              <i class="bi bi-chevron-right"></i>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-auto me-auto">
+              <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                [routerLink]="['/productos/Bazar']">Bazar</a>
+                <ul>
+                  <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                      [routerLink]="['/productos/manualidades']">Manualidades</a></li>
+                </ul>
+              </li>
+            </div>
+            <div class="col-auto" id="flecha">
+              <i class="bi bi-chevron-right"></i>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-auto me-auto">
+              <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                [routerLink]="['/productos/Cuadernos']">Cuadernos</a>
+                <ul>
+                  <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                      [routerLink]="['/productos/Agenda']">Agenda</a></li>
+                </ul>
+              </li>
+            </div>
+            <div class="col-auto" id="flecha">
+              <i class="bi bi-chevron-right"></i>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-auto me-auto">
+              <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                [routerLink]="['/productos/Escolares']">Escolares</a>
+                <ul>
+                  <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                      [routerLink]="['/productos/Boligrafos']">Boligrafos</a></li>
+                </ul>
+              </li>
+            </div>
+            <div class="col-auto" id="flecha">
+              <i class="bi bi-chevron-right"></i>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-auto me-auto">
+              <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                [routerLink]="['/productos/Juguetes']">Juguetes</a>
+                <ul>
+                  <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                      [routerLink]="['/productos/Balones']">Balones</a></li>
+                </ul>
+              </li>
+            </div>
+            <div class="col-auto" id="flecha">
+              <i class="bi bi-chevron-right"></i>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-auto me-auto">
+              <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                [routerLink]="['/productos/Libros']">Libros</a>
+                <ul>
+                  <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                      [routerLink]="['/productos/Diccionario']">Diccionario</a></li>
+                </ul>
+              </li>
+            </div>
+            <div class="col-auto" id="flecha">
+              <i class="bi bi-chevron-right"></i>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-auto me-auto">
+              <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                [routerLink]="['/productos/Limpieza']">Limpieza</a>
+                <ul>
+                  <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                      [routerLink]="['/productos/Cuidado Personal']">Cuidado Personal</a></li>
+                </ul>
+              </li>
+            </div>
+            <div class="col-auto" id="flecha">
+              <i class="bi bi-chevron-right"></i>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-auto me-auto">
+              <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                [routerLink]="['/productos/Maleteria']">Maleteria</a>
+                <ul>
+                  <li class="nav-item"><a class="nav-link fs-5" aria-current="page"
+                      [routerLink]="['/productos/Cartucheras']">Cartucheras</a></li>
+                </ul>
+              </li>
+            </div>
+            <div class="col-auto" id="flecha">
+              <i class="bi bi-chevron-right"></i>
+            </div>
+          </div>
+
+        </div>
+
+      </ul>
+    </li>
+    <li class="nav-item"><a class="nav-link fs-3" aria-current="page" style="margin-right: 20px;" [routerLink]="['/contacto']">CONTÁCTANOS</a></li>
+    <li class="nav-item"><a class="nav-link fs-3" aria-current="page" [routerLink]="['/admin']"><div class="admin"></div></a></li>
+    
+  </ul>
+</nav>
+<a id="carrito" class="nav-link fs-3" aria-current="page" [routerLink]="['/carrito']"><i style="font-size: 30px;" class="bi bi-cart4"></i></a>
+<!--Fin menu-->
+
+<!--<nav id="menu">
+  <ul>
+    <li><a [routerLink]="['/inicio']">Inicio</a></li>
+    <li><a [routerLink]="['/celulares']">Celulares</a></li>
+    <li><a [routerLink]="['/guardar-celular']">Guardar Celular</a></li>
+    <li><a [routerLink]="['/contacto']">Contacto</a></li>
+  </ul>
+</nav>-->
+<section id="content">
+  <router-outlet></router-outlet>
+</section>
+<app-pie></app-pie>

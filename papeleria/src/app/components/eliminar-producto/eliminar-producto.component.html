@@ -1,0 +1,23 @@
+<section id="enlaces">
+  <i class="bi bi-arrow-left-square-fill"></i><a [routerLink]="['/productosAdmin']">REGRESAR</a>
+</section>
+<div class="row text-center" id="tarjeta" style="margin-top: 10px; margin-left: 20px; font-family: 'BebasNeue';">
+    <div class="card" style="width: 18rem; margin-right: 10px; margin-bottom: 10px;">
+        <img src="{{url+'get-imagen/'+producto.imagen}}" *ngIf="producto.imagen" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{producto.nombre}}</h5>
+          <p class="card-text">Categoria: {{producto.categoria}}</p>
+          <p class="card-text">Sub-categoria: {{producto.subcategoria}}</p>
+          <p class="card-text">Stock: {{producto.stock}}</p>
+          <p class="card-text">Precio: ${{producto.precio}}</p>
+          <p *ngIf="confirm==false">
+            <a (click)="setConfirm(true)" class="btn btn-primary">Eliminar</a>
+          </p>
+          <p *ngIf="confirm==true">
+            <span style="margin-bottom: 10px;">¿Estas seguro de eliminar este producto?</span><br>
+            <a (click)="setConfirm(false)" class="btn btn-primary" style="margin-bottom: 10px;">Cancelar</a>
+            <a (click)="borrarProducto(producto._id)" class="btn btn-primary">Eliminar definitivamente</a>
+          </p>
+        </div>
+    </div>
+</div>

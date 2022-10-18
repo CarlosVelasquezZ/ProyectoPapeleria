@@ -1,0 +1,36 @@
+<section id="principal" >
+    <div class="row">
+        <div class="col-8">
+            <div class="row text-center" id="tarjeta" *ngFor="let producto of productos;let indexOfelement = index" style="margin-top: 10px; margin-left: 30%; margin-bottom: 50px;">
+                <div class="imagen" class="card" style="width: 18rem;" *ngIf="producto.imagen">
+                    <img src="{{url+'get-imagen/'+producto.imagen}}" *ngIf="producto.imagen" style="width: 287px;">
+                </div>
+                <div class="data" class="card" style="width: 18rem;">
+                    <h3>{{producto.nombre}}</h3>
+                    <h3>Total: ${{total[indexOfelement]}}</h3>
+                    <h3>Cantidad:
+                        <form #login="ngForm" (ngSubmit)="aumentar(login, producto._id, indexOfelement, producto.stock)">
+                            <input type="number" name="mas" min="1" max="{{producto.stock}}" ngModel="{{cantidad[indexOfelement]}}" class="btn btn-outline-dark btn-rounded" style="width:70px;">
+                            <input type="submit" value="Agregar" class="btn btn-outline-dark btn-rounded" style="margin-left: 5px;">
+                        </form>
+                    </h3>
+                    <button type="button" class="btn btn-outline-dark btn-rounded" (click)="eliminar(producto._id)">
+                        Eliminar
+                      </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-2" style="margin-top: 20px;">
+            <div class="rounded border border-secondary" id="totalPago" style="padding: 10px; margin-right: 5px; position: absolute; text-align: center; width: 321px;">
+                <h3>Total: ${{totalPago}}</h3>
+                <button *ngIf="control == false" type="button" class="btn btn-outline-dark btn-rounded" (click)="pago(totalPago)">Ir a Pagar</button>
+                <div id="paypal-button-container" *ngIf="control == true" style="width: 300px;">
+                    <div>
+                        <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+</section>

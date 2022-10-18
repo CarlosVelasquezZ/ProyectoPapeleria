@@ -1,0 +1,27 @@
+<section id="enlaces">
+    <a [routerLink]="['/productos/',categoria]" *ngIf="categoria !=null">{{categoria}}</a>
+    <i class="bi bi-caret-right-fill"*ngIf="categoria !=null"></i>
+    <a [routerLink]="['/productos',subcategoria]" *ngIf="categoria !=null && subcategoria != null">{{subcategoria}}</a>
+</section>
+<section id="principal" >
+    <div class="row text-center" id="tarjeta" style="margin-top: 10px; margin-left: 20px;" >
+        <div class="card" style="width: 18rem; margin-right: 10px; margin-bottom: 10px;" *ngFor="let producto of productos" >
+            <img src="{{url+'get-imagen/'+producto.imagen}}" *ngIf="producto.imagen" class="card-img-top" style="width: 300px;" class="card-img img-fluid" width="96" height="350" alt="">
+            <div class="card-body">
+              <h5 class="card-title">{{producto.nombre}}</h5>
+              <p class="card-text">Stock: {{producto.stock}}</p>
+              <p class="card-text">Precio: ${{producto.precio}}</p>
+              <p class="card-text">{{producto.categoria}}</p>
+              <a [routerLink]="['/producto',producto._id]" class="btn btn-primary">Ver Mas</a>
+            </div>
+        </div>
+    </div>
+    <div id="siguenos">
+        <label>SÍGUENOS</label>
+        <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://twitter.com/" target="_blank"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+    </div>
+</section>
+

@@ -1,0 +1,23 @@
+/*-------------------Enlaces-----------------*/
+#enlaces{
+    margin-top: 10px;
+    margin-left: 30px;
+    font-family: "BebasNeue";
+    margin-bottom: 20px;
+}
+#enlaces a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #202449;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+#enlaces a:hover{
+    color: #2f78bc;
+}
+p{
+    font-size: 17px;
+}
+i{
+    font-size: 20px;
+}

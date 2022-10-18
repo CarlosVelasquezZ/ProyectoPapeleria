@@ -1,0 +1,36 @@
+<section id="enlaces">
+    <a [routerLink]="['/inicio']">INICIO</a>
+    <i class="bi bi-caret-right-fill"></i>
+    <label>CONTÁCTANOS</label>
+</section>
+
+<section id="contenedor">
+    <h3>Formulario de contacto</h3>
+    <div id="contacto" class="aside-box">
+        <form #contactoForm="ngForm" (ngSubmit)="enviar(contactoForm)">
+            <label id="nombre">Nombre</label>
+            <input type="text" ngModel name="nombre">
+            <div id="clearfix"></div>
+            <label id="user">Correo electrónico</label>
+            <input type="email" ngModel name="email">
+            <div id="clearfix"></div>
+            <label id="telefono">Número de teléfono</label>
+            <input type="number" ngModel name="telefono">
+            <div id="clearfix"></div>
+            <label id="asunto">Asunto</label>
+            <input type="text" ngModel name="asunto">
+            <div id="clearfix"></div>
+            <label style="margin-left: 10px; margin-top: 10px;" id="Mensaje">Mensaje</label>
+            <textarea name="mensaje" class="mensaje"
+                placeholder="Deja aquí tu comentario..." ngModel></textarea>
+            <input type="submit" value="ENVIAR">
+        </form>
+    </div>
+</section>
+<div id="siguenos">
+    <label>SÍGUENOS</label>
+    <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+    <a href="https://twitter.com/" target="_blank"><i class="bi bi-twitter"></i></a>
+    <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
+    <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+</div>

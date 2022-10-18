@@ -1,0 +1,113 @@
+<section id="enlaces">
+    <i class="bi bi-arrow-left-square-fill"></i><a [routerLink]="['/admin']">REGRESAR</a>
+</section>
+<section id="contenedor" *ngIf="producto">
+    <h3>{{titulo}}</h3>
+    <!--<div class="message success" *ngIf="status=='success'">
+        El producto se ha guardado correctamente
+    </div>
+    <div class="message failed" *ngIf="status=='failed'">
+        El producto no se ha podido guardar
+    </div>-->
+    <!--<div id="registro" class="aside-box">
+        <div id="clearfix"></div>
+        <form #productoForm="ngForm" (ngSubmit)="guardarProducto(productoForm)">
+            <label id="categoria">Categoría</label>
+            <input type="text" name="categoria" #categoria="ngModel" [(ngModel)]="producto.categoria" required>
+            <span *ngIf="categoria.touched && !categoria.valid"><i class="bi bi-x-circle-fill"></i></span>
+            <div id="clearfix"></div>
+            <label id="subCategoria">Sub-Categoría</label>
+            <input type="text" name="subcategoria" #subcategoria="ngModel" [(ngModel)]="producto.subcategoria" required>
+            <span *ngIf="subcategoria.touched && !subcategoria.valid"><i class="bi bi-x-circle-fill"></i></span>
+            <div id="clearfix"></div>
+            <label id="proveedor">Proveedor</label>
+            <input type="text" name="proveedor" #proveedor="ngModel" [(ngModel)]="producto.proveedor" required>
+            <span *ngIf="proveedor.touched && !proveedor.valid"><i class="bi bi-x-circle-fill"></i></span>
+            <div id="clearfix"></div>
+            <label id="nombre">Nombre</label>
+            <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="producto.nombre" required>
+            <span *ngIf="nombre.touched && !nombre.valid"><i class="bi bi-x-circle-fill"></i></span>
+            <div id="clearfix"></div>
+            <label id="precio">Precio</label>
+            <input type="number" name="precio" #precio="ngModel" [(ngModel)]="producto.precio" required min="0">
+            <span *ngIf="precio.touched && !precio.valid"><i class="bi bi-x-circle-fill"></i></span>
+            <div id="clearfix"></div>
+            <label id="stock">Stock</label>
+            <input type="number" name="stock" #stock="ngModel" [(ngModel)]="producto.stock" required min="0">
+            <span *ngIf="stock.touched && !stock.valid"><i class="bi bi-x-circle-fill"></i></span>
+            <div id="clearfix"></div>
+            <label id="imagen" for="imagen">Imagen</label>
+            <span *ngIf="producto.imagen" style="float:none;">
+                <img src="{{url+'get-imagen/'+producto.imagen}}" style="width: 100px;">
+            </span>
+            <input type="file" #archivoImagen placeholder="Seleccionar imagen" (change)="imagenChangeEvent($event)" style="margin-left: 170px; margin-top: 10px;">
+            <div id="clearfix"></div>
+            <input type="submit" value="GUARDAR">
+        </form>
+
+    </div>-->
+
+    <form class="card shadow col-xs-12 col-sm-6 col-md-6 col-lg-4 p-4 mx-auto" #productoForm="ngForm"
+        (ngSubmit)="guardarProducto(productoForm)">
+        <div class="mb-3">
+            <label id="categoria">Categoría</label>
+            <input type="text" name="categoria" #categoria="ngModel" [(ngModel)]="producto.categoria"
+                class="form-control" required>
+            <div class="text-danger" *ngIf="categoria.touched && !categoria.valid">
+                <span>La categoria <strong>es obligatoria</strong></span>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label id="subCategoria">Sub-Categoría</label>
+            <input type="text" name="subcategoria" #subcategoria="ngModel" [(ngModel)]="producto.subcategoria" class="form-control" required>
+            <div class="text-danger" *ngIf="subcategoria.touched && !subcategoria.valid">
+                <span>La Sub-Categoria <strong>es obligatoria</strong></span>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label id="proveedor">Proveedor</label>
+            <input type="text" name="proveedor" #proveedor="ngModel" [(ngModel)]="producto.proveedor" class="form-control" required>
+            <div class="text-danger" *ngIf="proveedor.touched && !proveedor.valid">
+                <span>El proveedor<strong>es obligatorio</strong></span>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label id="nombre">Nombre</label>
+            <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="producto.nombre" class="form-control" required>
+            <div class="text-danger" *ngIf="nombre.touched && !nombre.valid">
+                <span>El nombre <strong>es obligatorio</strong></span>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label id="stock">Stock</label>
+            <input type="number" name="stock" #stock="ngModel" [(ngModel)]="producto.stock" class="form-control" required min="0">
+            <div class="text-danger" *ngIf="stock.touched && !stock.valid">
+                <span>El stock <strong>es obligatorio</strong></span>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label id="precio">Precio</label>
+            <input type="number" name="precio" #precio="ngModel" [(ngModel)]="producto.precio" class="form-control" required min="0">
+            <div class="text-danger" *ngIf="precio.touched && !precio.valid">
+                <span>El precio <strong>es obligatorio</strong></span>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label id="imagen" for="imagen">Imagen</label>
+            <span *ngIf="producto.imagen" style="float:none;">
+                <img src="{{url+'get-imagen/'+producto.imagen}}" style="width: 100px;">
+            </span>
+            <input type="file" #archivoImagen placeholder="Seleccionar imagen" (change)="imagenChangeEvent($event)"
+               class="form-control" name="imagen">
+        </div>
+        <input type="submit" value="GUARDAR" [disabled]="productoForm.invalid">
+    </form>
+</section>
+
+<div id="siguenos">
+    <label>SÍGUENOS</label>
+    <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+    <a href="https://twitter.com/" target="_blank"><i class="bi bi-twitter"></i></a>
+    <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
+    <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+</div>

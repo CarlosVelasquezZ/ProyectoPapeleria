@@ -1,0 +1,56 @@
+<section id="principal">
+    <iframe width="650" height="495" src="https://www.youtube.com/embed/Ycs7gq_fRcA"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+    <!--<img src="../../../assets/principal.jpg">-->
+</section>
+<aside id="lateral">
+    <!--LOGIN-->
+    <div id="login" class="aside-box">
+        <h4>LOGIN</h4>
+        <div class="cambiar">
+            <form #login="ngForm" (ngSubmit)="guardar(login)">
+                <label id="user">Correo electrónico</label>
+                <input type="email" name="email" ngModel>
+                <label id="password">Contraseña</label>
+                <input type="password" name="password" ngModel>
+                <div id="clearfix"></div>
+                <a [routerLink]="['/recuperar-contraseña']">¿Olvido su contrseña?</a>
+                <input type="submit" value="INICIAR SESIÓN">
+                <a [routerLink]="['/registrarse']">¿No esta registrado? Registrate aquí</a>
+            </form>
+        </div>
+    </div>
+    <!--REDES SOCIALES-->
+    <div id="social" class="aside-box">
+        <h4>SÍGUENOS</h4>
+        <div class="col text-center" id="social">
+            <div class="row justify-content-center">
+                <div class="col-3">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                </div>
+                <div class="col-3">
+                    <a href="https://twitter.com/" target="_blank"><i class="bi bi-twitter"></i></a>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-3">
+                    <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
+                </div>
+                <div class="col-3">
+                    <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+<div id="clearfix"></div>
+<section id="marcas">
+    <img src="../../../assets/norma.jpg" alt="">
+    <img src="../../../assets/bic.png" alt="">
+    <img style="width: 200px;" src="../../../assets/escribe.png" alt="">
+    <img style="width: 180px;" src="../../../assets/maxell.png" alt="">
+    <img style="width: 150px;" src="../../../assets/pelikan.jpg" alt="">
+    <img style="width: 150px;" src="../../../assets/stadler.jpg" alt="">
+</section>

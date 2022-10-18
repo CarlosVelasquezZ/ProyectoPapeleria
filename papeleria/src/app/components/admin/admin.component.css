@@ -1,0 +1,54 @@
+/*-------------------MENU ADMIN-----------------*/
+.seccionA{
+    margin-top: 70px; 
+    margin-bottom: 20px;
+}
+.seccionA h2{
+    color: #202449;
+    font-size: 30px;
+}
+.seccionA #Registrar{
+    height: 150px;
+    width: 150px;
+}
+.seccionA #Modificar{
+    height: 160px;
+    width: 170px;
+}
+.seccionA #Eliminar{
+    height: 160px;
+    width: 180px;
+}
+.seccionA #Actualizar{
+    height: 160px;
+    width: 160px;
+}
+/*-------------------REDES SOCIALES-----------------*/
+#siguenos{
+    background-color: #202449;
+    width: 95%;
+    margin-left: 30px;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 6px;
+    font-size: 25px;
+}
+#siguenos label{
+    font-family: "BebasNeue";
+    letter-spacing: 2px;
+    color: #EFA021;
+    margin-left: 450px;
+    padding: 3px;
+    margin-right: 20px;
+}
+#siguenos a{
+    color: white;
+    text-decoration: none;
+}
+#siguenos a:hover{
+    color: #EFA021;
+}
+#siguenos i{
+    margin-left: 15px;
+    margin-right: 15px;
+}
